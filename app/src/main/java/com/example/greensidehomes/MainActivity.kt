@@ -37,7 +37,12 @@ class MainActivity : AppCompatActivity() {
             loadWithOverviewMode = true
         }
 
+
+        webView.settings.userAgentString =
+            "${webView.settings.userAgentString} GreensideHomesApp"
         webView.webViewClient = WebViewClient()
+
+
 
         webView.webChromeClient = object : WebChromeClient() {
             override fun onShowFileChooser(
